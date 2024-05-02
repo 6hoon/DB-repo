@@ -1,0 +1,38 @@
+CREATE TABLE buy (
+    no         INTEGER NOT NULL,
+    quantity   INTEGER NOT NULL,
+    price      INTEGER NOT NULL,
+    user_id    VARCHAR2(12) NOT NULL,
+    cloth_code VARCHAR2(6) NOT NULL
+);
+
+ALTER TABLE buy ADD CONSTRAINT buy_pk PRIMARY KEY ( no );
+
+CREATE TABLE cloth (
+    code  VARCHAR2(6) NOT NULL,
+    type  CHAR(5) NOT NULL,
+    name  NVARCHAR2(20) NOT NULL,
+    stock INTEGER NOT NULL,
+    price INTEGER
+);
+
+ALTER TABLE cloth ADD CONSTRAINT cloth_pk PRIMARY KEY ( code );
+
+CREATE TABLE "User" (
+    id             VARCHAR2(12) NOT NULL,
+    pw             VARCHAR2(20) NOT NULL,
+    phone          VARCHAR2(12),
+    address        NVARCHAR2(20),
+    count          INTEGER,
+    bag_totalprice INTEGER NOT NULL
+);
+
+ALTER TABLE "User" ADD CONSTRAINT user_pk PRIMARY KEY ( id );
+
+ALTER TABLE buy
+    ADD CONSTRAINT buy_cloth_fk FOREIGN KEY ( cloth_code )
+        REFERENCES cloth ( code );
+
+ALTER TABLE buy
+    ADD CONSTRAINT buy_user_fk FOREIGN KEY ( user_id )
+        REFERENCES "User" ( id );
