@@ -27,9 +27,9 @@ public class SQLStudentConnect {
 		Connection con = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("데이타베이스 드라이버 로드 성공");
+//			System.out.println("데이타베이스 드라이버 로드 성공");
 			con = DriverManager.getConnection(url, user, password);
-			System.out.println("데이타베이스 접속 성공");
+//			System.out.println("데이타베이스 접속 성공");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("데이타베이스 드라이버 로드 실패");

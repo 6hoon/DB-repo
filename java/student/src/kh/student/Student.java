@@ -1,34 +1,32 @@
 package kh.student;
 
-import java.sql.Date;
 
 public class Student {
 	private int no;
-	private String sd_num;
-	private String sd_name;
-	private String sd_id;
-	private String sd_pw;
-	private String sd_birth;
-	private String sd_phone;
-	private String sd_email;
-	private Date sd_date;
-
-	public Student(int no, String sd_num, String sd_name, String sd_id, String sd_pw, String sd_birth, String sd_phone,
-			String sd_email, Date sd_date) {
-		super();
-		this.no = no;
-		this.sd_num = sd_num;
-		this.sd_name = sd_name;
-		this.sd_id = sd_id;
-		this.sd_pw = sd_pw;
-		this.sd_birth = sd_birth;
-		this.sd_phone = sd_phone;
-		this.sd_email = sd_email;
-		this.sd_date = sd_date;
-	}
+	private String stu_num;
+	private String stu_name;
+	private String stu_id;
+	private String stu_pw;
+	private String stu_birth;
+	private String stu_phone;
+	private String stu_email;
 
 	public Student() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(int no, String stu_num, String stu_name, String stu_id, String stu_pw, String stu_birth,
+			String stu_phone, String stu_email) {
+		super();
+		this.no = no;
+		this.stu_num = stu_num;
+		this.stu_name = stu_name;
+		this.stu_id = stu_id;
+		this.stu_pw = stu_pw;
+		this.stu_birth = stu_birth;
+		this.stu_phone = stu_phone;
+		this.stu_email = stu_email;
 	}
 
 	public int getNo() {
@@ -39,75 +37,67 @@ public class Student {
 		this.no = no;
 	}
 
-	public String getSd_num() {
-		return sd_num;
+	public String getStu_num() {
+		return stu_num;
 	}
 
-	public void setSd_num(String sd_num) {
-		this.sd_num = sd_num;
+	public void setStu_num(String stu_num) {
+		this.stu_num = stu_num;
 	}
 
-	public String getSd_name() {
-		return sd_name;
+	public String getStu_name() {
+		return stu_name;
 	}
 
-	public void setSd_name(String sd_name) {
-		this.sd_name = sd_name;
+	public void setStu_name(String stu_name) {
+		this.stu_name = stu_name;
 	}
 
-	public String getSd_id() {
-		return sd_id;
+	public String getStu_id() {
+		return stu_id;
 	}
 
-	public void setSd_id(String sd_id) {
-		this.sd_id = sd_id;
+	public void setStu_id(String stu_id) {
+		this.stu_id = stu_id;
 	}
 
-	public String getSd_pw() {
-		return sd_pw;
+	public String getStu_pw() {
+		return stu_pw;
 	}
 
-	public void setSd_pw(String sd_pw) {
-		this.sd_pw = sd_pw;
+	public void setStu_pw(String stu_pw) {
+		this.stu_pw = stu_pw;
 	}
 
-	public String getSd_birth() {
-		return sd_birth;
+	public String getStu_birth() {
+		return stu_birth;
 	}
 
-	public void setSd_birth(String sd_birth) {
-		this.sd_birth = sd_birth;
+	public void setStu_birth(String stu_birth) {
+		this.stu_birth = stu_birth;
 	}
 
-	public String getSd_phone() {
-		return sd_phone;
+	public String getStu_phone() {
+		return stu_phone;
 	}
 
-	public void setSd_phone(String sd_phone) {
-		this.sd_phone = sd_phone;
+	public void setStu_phone(String stu_phone) {
+		this.stu_phone = stu_phone;
 	}
 
-	public String getSd_email() {
-		return sd_email;
+	public String getStu_email() {
+		return stu_email;
 	}
 
-	public void setSd_email(String sd_email) {
-		this.sd_email = sd_email;
-	}
-
-	public Date getSd_date() {
-		return sd_date;
-	}
-
-	public void setSd_date(Date sd_date) {
-		this.sd_date = sd_date;
+	public void setStu_email(String stu_email) {
+		this.stu_email = stu_email;
 	}
 
 	@Override
 	public String toString() {
-		return "[" + no + ", " + sd_num + ", " + sd_name + ", (id:" + sd_id + ", pw: "
-				+ sd_pw + "), " + sd_birth + ", " + sd_phone + ", " + sd_email + ", 등록일:"
-				+ sd_date + "]";
+		return "Student [no=" + no + ", stu_num=" + stu_num + ", stu_name=" + stu_name + ", stu_id=" + stu_id
+				+ ", stu_pw=" + stu_pw + ", stu_birth=" + stu_birth + ", stu_phone=" + stu_phone + ", stu_email="
+				+ stu_email + "]";
 	}
 
 }
